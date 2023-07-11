@@ -1,0 +1,13 @@
+# Use a CUDA-enabled base image
+FROM nvidia/cuda:11.0-base
+# Set the working directory
+WORKDIR /app
+# Install any CPU-specific dependencies (if applicable)
+COPY requirements_cpu.txt .
+RUN pip install -r requirements_cpu.txt
+# Copy your code into the image
+COPY . .
+# Set the execution command
+CMD ["python", "step1_prep_tables.py"]
+CMD ["python", "step2_prep_all_hashphase.py"]
+

@@ -1,0 +1,15 @@
+# create environment : conda env create -f env_cpu.yml
+# update dependencies: conda env update -f env_cpu.yml
+# remove environment : conda env remove -n REFOC_cpu
+# enter  environment : conda activate REFOC_cpu
+# exit   environment : conda deactivate
+name: REFOC_cpu
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - obspy
+  - pickle

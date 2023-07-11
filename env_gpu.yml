@@ -1,0 +1,16 @@
+# create environment : conda env create -f env_gpu.yml
+# update dependencies: conda env update -f env_gpu.yml
+# remove environment : conda env remove -n REFOC_gpu
+# enter  environment : conda activate REFOC_gpu
+# exit   environment : conda deactivate
+name: REFOC_gpu
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - obspy
+  - numba
+  - cudatoolkit=10.2
