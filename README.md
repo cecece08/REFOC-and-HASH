@@ -25,7 +25,7 @@ Cheng, Y., Allen, R. M., & Taira, T. A. (2023). A New Focal Mechanism Calculatio
 
 ## Installation
 
-To install REFOC, first clone this library onto your computer with <mark>git clone</mark>  and the address of the git repository (see the green Code button). The easiest way to gather all the dependencies is to create a new conda environment with 'conda env create -f env_gpu.yml' in the directory where you've cloned the repository. 
+To install REFOC, first clone this library onto your computer with `git clone` and the address of the git repository (see the green Code button). The easiest way to gather all the dependencies is to create a new conda environment with 'conda env create -f env_gpu.yml' in the directory where you've cloned the repository. 
 Then, run python setup.py install from the directory where you've cloned the repository.
 
 Note that, the preparation stage does not require GPU. If you perform the data preparation and focal mechanism calculation separately, you can use 'env_cpu.yml' for data preparation and 'env_gpu.yml' for focal mechanism calculation.
