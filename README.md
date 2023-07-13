@@ -67,8 +67,11 @@ an example with 50 earthquakes in the Parkfield area is provided in the `Input_p
 Simply run the following 4 codes will output the focal mechanism solutions based on HASH (in `$dir_output/iter0/`) and REFOC (in `$dir_output/iter1/`) respectively.
 
 `python step1_prep_tables.py`
+
 `python step2_prep_all_hashphase.py`
+
 `python step3_calc_focmec_init.py`
+
 `python step4_calc_focmec_refoc.py`
 
 
