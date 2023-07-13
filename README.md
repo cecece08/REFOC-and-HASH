@@ -15,21 +15,13 @@ Cheng, Y., Allen, R. M., & Taira, T. A. (2023). A New Focal Mechanism Calculatio
 - [Installation](#installation)
 - [Usage](#usage)
 - [Input File Format](#input-file-format)
-- [Features](#features)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Credits](#credits)
-- [Support](#support)
-- [Versioning](#versioning)
-- [Changelog](#changelog)
-- [Roadmap](#roadmap)
 - [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Acknowledgments](#acknowledgments)
-- [Related Projects](#related-projects)
-- [FAQ](#frequently-asked-questions-faq)
-- [Conclusion](#conclusion)
+- [Calculate your own focal mechanisms](#calculate-your-own-focal-mechanisms)
+- [License](#license)
+
+
+
+
 
 ## Installation
 
