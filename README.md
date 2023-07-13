@@ -52,14 +52,14 @@ Step4: Further refine the focal mechanisms inter-event P/P and S/S amplitude rat
 
 All required input files can be found from `Input_parameters.py`
 
-Input event file: `evfile`
-Detailed earthquake location file: `locfile`
-station information file: `stafile`
-station polarity reversal file: `plfile`
-waveform file: in waveform directory `wf_dir`
-list of velocity models: `vm_list`
-velocity model file: in velocity model directory `wf_dir`
-travel time table file: in table directory `table_dir`
+1. Input event file: `evfile`
+2. Detailed earthquake location file: `locfile`
+3. Station information file: `stafile`
+4. Station polarity reversal file: `plfile`
+5. Waveform file: in waveform directory `wf_dir`
+6. List of velocity models: `vm_list`
+7. Velocity model file: in velocity model directory `wf_dir`
+8. Travel time table file: in table directory `table_dir`
 
 ## Examples
 
