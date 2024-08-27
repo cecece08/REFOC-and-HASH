@@ -55,13 +55,31 @@ Step4: Further refine the focal mechanisms inter-event P/P and S/S amplitude rat
 All required input files can be found from `Input_parameters.py`
 
 1. Input event file: `evfile`
+ 'year month evid latitude longitude depth magnitude directory_info'
 2. Detailed earthquake location file: `locfile`
-3. Station information file: `stafile`
-4. Station polarity reversal file: `plfile`
-5. Waveform file: in waveform directory `wf_dir`
-6. List of velocity models: `vm_list`
-7. Velocity model file: in velocity model directory `wf_dir`
-8. Travel time table file: in table directory `table_dir`
+ 'year month day hour minute second evid latitude longitude depth magnitude 0.000 0.000 0.000 0.000 velocity_model_info'
+3. earthquake phase file: in 'dir_phase'
+ '$dir_phase/YYYY/YYYYMM/${evid}.phase'
+ first line in phase file:
+ 'evid eq l YYYY/MM/DD,HH:MM:SS event_latitude event_longitude event_depth magnitude l 1.0'
+ the following lines in phase file:
+ 'network station channel -- station_latitude station_longitude station_elevation phase(P/S) polarity(d/c/.) arrival(e/i) 1.0 epicentral_distance travel_time'
+
+d: dilatational polarity = -1
+c: compressional polarity = 1
+
+e: emergent
+i: impulsive
+
+5. Station information file: `stafile`
+ 'network station channel -- station_info latitude longitude elevation(m) starttime(YYYY/MM/DD) endtime(YYYY/MM/DD)     0'  
+6. Station polarity reversal file: `plfile`
+ 'station starttime_of_reversal(YYYYMMDD)  endtime_of_reversal(YYYYMMDD)'
+7. Waveform file: in waveform directory `wf_dir`
+'${wf_dir}/YYYY/YYYYMM/${evid}'
+8. List of velocity models: `vm_list`
+'list in Input_parameters.py'
+9. Velocity model file: in velocity model directory `vmdir`
 
 ## Examples
 
