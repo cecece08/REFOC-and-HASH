@@ -60,8 +60,10 @@ All required input files can be found from `Input_parameters.py`
  'year month day hour minute second evid latitude longitude depth magnitude 0.000 0.000 0.000 0.000 velocity_model_info'
 3. earthquake phase file: in 'dir_phase'
  '$dir_phase/YYYY/YYYYMM/${evid}.phase'
+
  first line in phase file:
  'evid eq l YYYY/MM/DD,HH:MM:SS event_latitude event_longitude event_depth magnitude l 1.0'
+ 
  the following lines in phase file:
  'network station channel -- station_latitude station_longitude station_elevation phase(P/S) polarity(d/c/.) arrival(e/i) 1.0 epicentral_distance travel_time'
 
