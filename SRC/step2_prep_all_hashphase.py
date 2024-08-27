@@ -11,8 +11,14 @@ import Input_parameters as ip
 global table
 global deptab
 global delttab
+global table_tp
+global table_ts
 fid = open(ip.table_dir+'/table.pickle','rb')
 table = pickle.load(fid)
+fid = open(ip.table_dir+'/mttp.pickle','rb')
+mttp = pickle.load(fid)
+fid = open(ip.table_dir+'/mtts.pickle','rb')
+mtts = pickle.load(fid)
 fid = open(ip.table_dir+'/deptab.pickle','rb')
 deptab = pickle.load(fid)
 fid = open(ip.table_dir+'/delttab.pickle','rb')
@@ -37,10 +43,7 @@ if __name__ == "__main__":
     waveform_dir = ip.wf_dir
     freloc = ip.locfile
     vm_dir = ip.vmdir
-    fTTp = ip.table_dir+'/ttp_median.txt'
-    fTTs= ip.table_dir+'/tts_median.txt'
-    TTp = np.loadtxt(fTTp)
-    TTs = np.loadtxt(fTTs)
+
     fid=open(fev)
     for wfline in fid:
         no_wf = 0
@@ -139,9 +142,9 @@ if __name__ == "__main__":
 
             depth=min(26,qdep0)
             depth=max(1,qdep0)
+            iflag, ttp = Get_TTS_tt(dist,qdep2[nm],mttp,deptab,delttab)
+            iflag, tts = Get_TTS_tt(dist,qdep2[nm],mtts,deptab,delttab)
 
-            ttp,junk=calc_tt(dist,depth,TTp,TTs,phase='P')
-            tts,junk=calc_tt(dist,depth,TTp,TTs,phase='S')
             qdeg,qazi0=calc_deg_azi(slat,slon,qlat0,qlon0)
             cang=np.cos(qazi0/180*np.pi)
             sang=np.sin(qazi0/180*np.pi)
@@ -280,8 +283,8 @@ if __name__ == "__main__":
             depth=min(26,qdep0)
             depth=max(1,qdep0)
 
-            ttp,junk=calc_tt(dist,depth,TTp,TTs,phase='P')
-            tts,junk=calc_tt(dist,depth,TTp,TTs,phase='S')
+            iflag, ttp = Get_TTS_tt(dist,qdep2[nm],mttp,deptab,delttab)
+            iflag, tts = Get_TTS_tt(dist,qdep2[nm],mtts,deptab,delttab)
 
             tstart=qtime+ttp-7
             tend=qtime+tts+7

@@ -7,10 +7,20 @@ import os
 
 if not os.path.isdir(ip.table_dir):
     os.mkdir(ip.table_dir)
-table,deptab,delttab = Mk_Table(ip.vmdir,ip.vm_list)
+table,table_tp,deptab,delttab = Mk_tpTable(ip.vmdir,ip.vm_list)
+table,table_ts,deptab,delttab = Mk_tsTable(ip.vmdir,ip.vm_list)
+
 # take-off angle table
 fout = open(ip.table_dir+'/table.pickle','wb')
 pickle.dump(table,fout)
+# ttp table
+mttp = np.median(table_tp,axis = 2)
+fout = open(ip.table_dir+'/mttp.pickle','wb')
+pickle.dump(mttp,fout)
+# tts table
+mtts = np.median(table_ts,axis = 2)
+fout = open(ip.table_dir+'/mtts.pickle','wb')
+pickle.dump(mtts,fout)
 # depth table
 fout = open(ip.table_dir+'/deptab.pickle','wb')
 pickle.dump(deptab,fout)
