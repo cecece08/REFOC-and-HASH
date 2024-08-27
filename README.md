@@ -55,7 +55,7 @@ Step4: Further refine the focal mechanisms inter-event P/P and S/S amplitude rat
 All required input files can be found from `Input_parameters.py`
 
 1. Input event file: `evfile`
- 'year month evid latitude longitude depth magnitude directory_info'
+ `year month evid latitude longitude depth magnitude directory_info`
 2. Detailed earthquake location file: `locfile`
  'year month day hour minute second evid latitude longitude depth magnitude 0.000 0.000 0.000 0.000 velocity_model_info'
 3. earthquake phase file: in 'dir_phase'
